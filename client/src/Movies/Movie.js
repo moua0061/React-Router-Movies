@@ -15,7 +15,7 @@ export default function Movie(props) {
         // Study this response with a breakpoint or log statements
         console.log(response);
         // and set the response data as the 'movie' slice of state
-        return setMovie(response);
+        return setMovie(response.data);
       })
       .catch(error => {
         console.error(error);
