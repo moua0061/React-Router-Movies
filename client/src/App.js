@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 
 
 //components used for different routes
@@ -38,14 +38,15 @@ export default function App () {
   return (
     <div>
       <SavedList list={[ /* This is stretch */]} />
-
+    
       <Route path='/movies/:id'>
         <Movie />
       </Route>
 
-      <Route path='/'>
+      <Route exact path='/'>
         <MovieList movies={movieList} />
       </Route>
+    
     </div>
   );
 } 
